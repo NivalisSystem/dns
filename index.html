@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Get the path after the domain, e.g., "/option1"
+        const path = window.location.pathname;
+
+        // Define the redirects based on the path
+        const redirects = {
+            '/github': 'https://github.com/NivalisSystem',
+            //'/option1': 'https://another-website.com/another-link',
+            //'/option2': 'https://yet-another-website.com/some-link'
+        };
+
+        // Perform the redirection if a match is found
+        if (redirects[path]) {
+            window.location.href = redirects[path];
+        } else {
+            document.write("<h1>Page Not Found</h1><p>The page you are looking for doesn't exist.</p>");
+        }
+    </script>
+</head>
+<body>
+    <p>If you are not redirected, click <a href="/">here</a>.</p>
+</body>
+</html>
